@@ -30,3 +30,7 @@ for(let i = 0; i < liInsideOl.length; i++){
 
 12. let footer = document.querySelector(".footer");
 footer.remove();
+
+
+
+mike@nytp.com
