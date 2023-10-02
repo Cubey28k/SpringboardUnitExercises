@@ -23,8 +23,8 @@ const mergeObjects = (obj1, obj2) => ({...obj1}, {...obj2});
 const doubleAndReturnArgs = (arr, ...args) => [arr, ...args.map(v => v * 2)]
 
 const removeRandom = items => {
-    let idx= Math.floor(Math.random() * items.length);
-    return [...items.slice(0, idx), ...itemsslice(idx+1)];
+    let idx = Math.floor(Math.random() * items.length);
+    return [...items.slice(0, idx), ...items.slice(idx+1)];
 }
 
 /** Return a new array with every item in array1 and array2. */
