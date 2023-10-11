@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+ outline: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, rgb(255, 157, 52) 45%, rgb(252, 72, 255));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+input {
+ border: unset;
+ background: #ffffff4a;
+ justify-content: center;
+ align-items: center;
+}
+
+div.search-container {
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-getfruit {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(255, 77, 1);
+  color:azure;
+  cursor:pointer;
+  border: unset;
+  position: absolute;
+  max-height: 150px;
+}
+
+.search-container {
+ margin-top: 20px 
+}
+.search-container input,
+.search-container .suggestions {
+  width: 300px;
+}
+.search-container input {
+ padding: 10px;
+}
+.search-container .suggestions {
+  background: #ffffff4a;
+  position: absolute;
+  max-height: 150px;
+  overflow-y: auto;
+  display: block;
+  width: 50%;
+}
+
+.search-container .suggestions {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+ul.has-suggestions {
+  display: block;
+}
+
+ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background: #eee;
+}
+
+input {
+   font-size: 16px;
+   border-radius: 5px;
+}
