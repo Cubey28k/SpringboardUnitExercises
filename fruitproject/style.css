@@ -32,6 +32,7 @@ input {
 div.search-container {
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 button {
@@ -44,7 +45,7 @@ button {
   color:azure;
   cursor:pointer;
   border: unset;
-  position: absolute;
+  position: absolute; 
   max-height: 150px;
 }
 
@@ -67,9 +68,7 @@ button {
   width: 50%;
 }
 
-.search-container .suggestions {
-  display: block;
-}
+
 
 ul {
   list-style: none;

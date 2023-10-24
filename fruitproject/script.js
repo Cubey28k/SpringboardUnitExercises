@@ -19,12 +19,12 @@ function searchHandler() {
     const results = search(query);
     showSuggestions(results);
   } else {
-    suggestionsList.innerHTML = ''; // Clear suggestions if input is empty
+    suggestionsList.innerHTML = ''; // Clear suggestions if input is empty  
   }
 }
 
 function showSuggestions(results) {
-  if (results.length > 0) {
+  if (results.length > 0) {  //before show suggestions
     suggestionsList.innerHTML = ''; // Clear any previous suggestions
 
     results.forEach(result => {
