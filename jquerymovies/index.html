@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ratings</title>
+</head>
+<body>
+    <h1>Movie Rating List</h1>
+    <h4>Rate movies 1-10</h4>
+    
+    <div class = "my-form">
+        <input type = "text" name = "name" minlength = "2" value = ""></input>
+        <input type = "number" name = "rating" min = "0" max = "10" value = ""></input>
+        <button id = "submit-btn">Submit Movie</button>
+    </div>
+
+    <div class = "list">
+        <ul></ul>
+        <button id="sort-btn">Sort Alphabetically</button>
+        <button id="sort-btn2">Sort by Rating</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
