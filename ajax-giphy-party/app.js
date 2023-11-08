@@ -1,24 +1,3 @@
-// console.log("Let's get this party started!");
-
-
-// //inputs and buttons
-// gifForm.addEventListener('submit', function(event) {
-//    event.preventDefault});
-
-
-
-
-
-//   //Gif post handling
-//   async function getGif(q, api_key) {
-//     const res = await axios.get('http://api.giphy.com/v1/gifs/search', 
-//     {params: {q: searchTerm,api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"}})
-
-//     const gifContainer = document.getElementById("gif-container");
-//     gifContainer.appendChild(imgElement)
-//   }
-
-
 console.log("Let's get this party started!");
 
 const gifForm = document.getElementById('gif-form');
