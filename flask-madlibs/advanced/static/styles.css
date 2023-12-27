@@ -1,0 +1,14 @@
+body {
+    background-image: url(https://www.shutterstock.com/shutterstock/photos/1936904506/display_1500/stock-photo-dj-playing-music-on-concert-club-disc-jockey-mixing-musical-tracks-with-modern-controller-1936904506.jpg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    margin: 100;
+    padding: 100;
+    color: rgb(47, 255, 0);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+

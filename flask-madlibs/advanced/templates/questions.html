@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>Madlibs</title>
+</head>
+<body>
+
+  <h1>Questions for {{ title }}</h1>
+  <form action="/story">
+    {% for prompt in prompts %}
+      <p>{{ prompt }}:
+        <input name="{{ prompt }}">
+      </p>
+    {% endfor %}
+    <input type="hidden" name="story_id" value="{{ story_id}}">
+    <button>Submit</button>
+  </form>
+</body>
+</html>
