@@ -1,0 +1,33 @@
+header {
+    background-color: rgba(71, 255, 237, 0.462);
+    color: rgb(99, 17, 17);
+    font-size: 200%;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 1em;
+    font-family: fantasy
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(71, 255, 237, 0.462);
+    color: rgb(99, 17, 17);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.flash-messages {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+}
