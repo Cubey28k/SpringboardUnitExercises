@@ -1,0 +1,52 @@
+body {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5d06d8691cfbfe00012dc69f/1694577886900-UW3HGFPN6RG1E8D75F4E/09-peggy-boggle-champ-king-of-the-hill-podcast-review.jpg?format=1000w'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover; /* Adjust the background size as needed */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center center; /* Center the background image */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color:#ffffff;
+  background-color: #946629;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #2b6cc1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.board {
+  margin: 0 auto; /* Set left and right margins to "auto" for centering */
+  text-align: center; /* Center the content inside the board */
+  color: #fbfdff;
+  background-color: #946629;
+}
+
+h1, h2 {
+  color: #e3af8d; /* Brown color for heading text */
+  background-color: #946629;
+}
+
+.card {
+  background-color: #b77070;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #6b4226;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Add more specific styles as needed for your project */
