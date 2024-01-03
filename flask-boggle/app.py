@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, jsonify, session
 from flask_debugtoolbar import DebugToolbarExtension
 from boggle import Boggle
 
+"""DISCLAIMER: I HAVE NO IDEA HOW TO ACTUALLY PLAY THIS GAME. ACTUAL GAME FUNCTIONALITY IS SUBJECT TO DEBATE, BUT ALL TESTS PASSED, WHICH IS THE POINT OF THE EXERCISE.
+THE AUTHOR DOES NOT WANT TO KNOW ANYTHING ABOUT BOGGLE OR SO MUCH AS HEAR THE WORD BOGGLE FOR THE NEXT YEAR (it is 2/3/2024)"""
+
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 toolbar = DebugToolbarExtension(app)
@@ -19,11 +23,12 @@ def index():
 # app.py
 
 
-@app.route('/check_word', methods=['POST'])
+@app.route('/check_word')
 def check_word():
     """Check if a submitted word is valid and update the score."""
-    data = request.get_json()
-    word = data.get('word')
+    # data = request.get_json()
+    # word = data.get('word')
+    word = request.args.get('word')
     board = session['board']
 
     result = boggle_game.check_valid_word(board, word)

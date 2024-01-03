@@ -1,4 +1,5 @@
 """Utilities related to Boggle game."""
+"""DISCLAIMER: I HAVE NO IDEA HOW TO ACTUALLY PLAY THIS GAME."""
 
 from random import choice
 import string
