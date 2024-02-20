@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deck of Cards</title>
+</head>
+<body>
+  <!-- Button to draw a card -->
+  <button id="drawCardBtn">Draw a Card</button>
+  <br><br>
+  <!-- Container to display the drawn card -->
+  <div id="cardDisplay"></div>
+
+  <script>
+    // Function to fetch a single card from a newly shuffled deck
+    function fetchSingleCard() {
+      return fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=1')
+        .then(response => response.json())
+        .then(data => {
+          const card = data.cards[0];
+          console.log(`Single card: ${card.value} of ${card.suit}`);
+          return card;
+        });
+    }
+
+    // Function to fetch two cards from the same deck
+    function fetchTwoCardsFromSameDeck() {
+      return fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=2')
+        .then(response => response.json())
+        .then(data => {
+          const cards = data.cards;
+          console.log(`First card: ${cards[0].value} of ${cards[0].suit}`);
+          console.log(`Second card: ${cards[1].value} of ${cards[1].suit}`);
+          return cards;
+        });
+    }
+
+    // Function to initialize a new deck and draw cards on button click
+    function initializeDeckAndDraw() {
+      let deckId;
+
+      // Fetch a new deck on page load
+      fetch('https://deckofcardsapi.com/api/deck/new/')
+        .then(response => response.json())
+        .then(data => {
+          deckId = data.deck_id;
+        });
+
+      // Event listener for draw card button
+      const drawCardBtn = document.getElementById('drawCardBtn');
+      drawCardBtn.addEventListener('click', () => {
+        if (!deckId) {
+          console.error('Deck ID not available.');
+          return;
+        }
+
+        // Draw a card from the deck
+        fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
+          .then(response => response.json())
+          .then(data => {
+            const card = data.cards[0];
+            console.log(`Drawn card: ${card.value} of ${card.suit}`);
+            document.getElementById('cardDisplay').innerText = `${card.value} of ${card.suit}`;
+          });
+      });
+    }
+
+    // Call the function to initialize the deck and draw cards
+    initializeDeckAndDraw();
+  </script>
+</body>
+</html>
