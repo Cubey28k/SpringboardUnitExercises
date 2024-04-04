@@ -21,12 +21,12 @@ class MarkovMachine {
   makeChains() {
     // TODO
     let chain = {};
-    for(let i = 0; i < this.words.length -1; i++) {
-    const currentWord = this.words[i];
-    const nextWord = this.words[i + 1];
+    for (let i = 0; i < this.words.length - 1; i++) {
+      const currentWord = this.words[i];
+      const nextWord = this.words[i + 1];
 
       // console.log(currentWord)
-      if (chain[currentWord]){
+      if (chain[currentWord]) {
         chain[currentWord].push(nextWord);
       }
       else {
@@ -52,25 +52,18 @@ class MarkovMachine {
       const nextWordOption = this.chain[currentWord]
 
       if (nextWordOption) {
-      const nextWord = nextWordOption[Math.floor(Math.random() * nextWordOption.length)];
-      // console.log('Next word:', nextWord);
+        const nextWord = nextWordOption[Math.floor(Math.random() * nextWordOption.length)];
+        // console.log('Next word:', nextWord);
 
-      currentWord = nextWord;
+        currentWord = nextWord;
       } else {
         // console.log('no next word available:', currentWord);
         break;
       }
     }
-    // console.log('Generated text:', text);
+    console.log('Generated text:', text);
     return text.trim();
   }
-
-  chooseNextWord(options) {
-    //choose the next word on probability based on the options array
-    const index = Math.floor(Math.random() * options.length);
-    return options[index]
-  }
-  
 }
 
 const machine = new MarkovMachine("HERE IS YOUR WORD SOUP:")
@@ -78,4 +71,6 @@ const generatedText = machine.makeText();
 console.log(generatedText);
 machine.makeChains()
 
-module.exports = {MarkovMachine};
+module.exports = { MarkovMachine };
+
+//cmd+shift+p

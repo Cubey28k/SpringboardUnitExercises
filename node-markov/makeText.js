@@ -51,4 +51,3 @@ switch (method) {
             console.error(`Invalid method: ${method}`);
             process.exit(1);
 }
-
